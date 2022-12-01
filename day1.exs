@@ -1,0 +1,21 @@
+# Part 1
+IO.puts("Part 1:")
+File.read!("day1.txt")
+|> String.split("\n\n", trim: true)
+|> Enum.map(&(String.split(&1, "\n", trim: true)))
+|> Enum.map(fn elf -> Enum.map(elf, &String.to_integer/1) end)
+|> Enum.map(&Enum.sum/1)
+|> Enum.max()
+|> IO.inspect()
+
+# Part 2
+IO.puts("Part 2:")
+File.read!("day1.txt")
+|> String.split("\n\n", trim: true)
+|> Enum.map(&(String.split(&1, "\n", trim: true)))
+|> Enum.map(fn elf -> Enum.map(elf, &String.to_integer/1) end)
+|> Enum.map(&Enum.sum/1)
+|> Enum.sort(:desc)
+|> Enum.take(3)
+|> Enum.sum()
+|> IO.inspect()
