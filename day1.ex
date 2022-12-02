@@ -7,13 +7,11 @@ defmodule Day1 do
     |> Enum.map(&Enum.sum/1)
 end
 
-  # Part 1
   def part1() do
     calories()
     |> Enum.max()
   end
 
-  # Part 2
   def part2() do
     calories()
     |> Enum.sort(:desc)
