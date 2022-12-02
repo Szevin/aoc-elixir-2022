@@ -1,6 +1,6 @@
 defmodule Day1 do
   def calories() do
-    File.read!("day1.txt")
+    File.read!("1.txt")
     |> String.split("\n\n", trim: true)
     |> Enum.map(&(String.split(&1, "\n", trim: true)))
     |> Enum.map(fn elf -> Enum.map(elf, &String.to_integer/1) end)

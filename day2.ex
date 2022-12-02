@@ -1,6 +1,6 @@
 defmodule Day2 do
   def input() do
-    File.stream!("day2.txt")
+    File.stream!("2.txt")
     |> Stream.map(fn
       "A " <> guess -> {:A, Enum.at(to_charlist(guess) ++ [0], 0) - 87}
       "B " <> guess -> {:B, Enum.at(to_charlist(guess) ++ [0], 0) - 87}
